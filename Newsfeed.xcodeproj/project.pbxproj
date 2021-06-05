@@ -11,7 +11,6 @@
 		FF3A01F3266BE50E00CEE19A /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A01F2266BE50E00CEE19A /* LabelExtension.swift */; };
 		FFEAE3C9266B6CC9002D666E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3C8266B6CC9002D666E /* AppDelegate.swift */; };
 		FFEAE3CB266B6CC9002D666E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3CA266B6CC9002D666E /* SceneDelegate.swift */; };
-		FFEAE3CD266B6CC9002D666E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3CC266B6CC9002D666E /* ViewController.swift */; };
 		FFEAE3D0266B6CC9002D666E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3CE266B6CC9002D666E /* Main.storyboard */; };
 		FFEAE3D2266B6CCB002D666E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3D1266B6CCB002D666E /* Assets.xcassets */; };
 		FFEAE3D5266B6CCB002D666E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3D3266B6CCB002D666E /* LaunchScreen.storyboard */; };
@@ -34,7 +33,6 @@
 		FFEAE3C5266B6CC9002D666E /* Newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEAE3C8266B6CC9002D666E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEAE3CA266B6CC9002D666E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFEAE3CC266B6CC9002D666E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFEAE3CF266B6CC9002D666E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFEAE3D1266B6CCB002D666E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFEAE3D4266B6CCB002D666E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 		FFEAE3C7266B6CC9002D666E /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
-				FFEAE3CC266B6CC9002D666E /* ViewController.swift */,
 				FFEAE3CE266B6CC9002D666E /* Main.storyboard */,
 				FFEAE3DD266B6E13002D666E /* ServiceLayer */,
 				FFEAE3DC266B6DE7002D666E /* MVC */,
@@ -119,6 +116,7 @@
 				FFEAE3E6266B6E7D002D666E /* News */,
 				FFEAE3E8266B6E8D002D666E /* Detail */,
 				FFEAE3E7266B6E85002D666E /* Gallery */,
+				FFEAE3DE266B6E41002D666E /* ImageViewLoadExtension.swift */,
 				FFEAE3E4266B6E6F002D666E /* Model.swift */,
 			);
 			path = MVC;
@@ -127,7 +125,6 @@
 		FFEAE3DD266B6E13002D666E /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FFEAE3DE266B6E41002D666E /* ImageViewLoadExtension.swift */,
 				FFEAE3E0266B6E50002D666E /* NetworkService.swift */,
 				FFEAE3E2266B6E5C002D666E /* RealmService.swift */,
 			);
@@ -281,7 +278,6 @@
 				FFEAE3E1266B6E50002D666E /* NetworkService.swift in Sources */,
 				FFEAE3F2266B6EF3002D666E /* DetailViewController.swift in Sources */,
 				FFEAE3E3266B6E5C002D666E /* RealmService.swift in Sources */,
-				FFEAE3CD266B6CC9002D666E /* ViewController.swift in Sources */,
 				FFEAE3C9266B6CC9002D666E /* AppDelegate.swift in Sources */,
 				FFEAE3DF266B6E41002D666E /* ImageViewLoadExtension.swift in Sources */,
 				FFEAE3EE266B6ED5002D666E /* GalleryCell.swift in Sources */,
