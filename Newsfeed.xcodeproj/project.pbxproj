@@ -13,6 +13,15 @@
 		FFEAE3D0266B6CC9002D666E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3CE266B6CC9002D666E /* Main.storyboard */; };
 		FFEAE3D2266B6CCB002D666E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3D1266B6CCB002D666E /* Assets.xcassets */; };
 		FFEAE3D5266B6CCB002D666E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEAE3D3266B6CCB002D666E /* LaunchScreen.storyboard */; };
+		FFEAE3DF266B6E41002D666E /* ImageViewLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3DE266B6E41002D666E /* ImageViewLoadExtension.swift */; };
+		FFEAE3E1266B6E50002D666E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3E0266B6E50002D666E /* NetworkService.swift */; };
+		FFEAE3E3266B6E5C002D666E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3E2266B6E5C002D666E /* RealmService.swift */; };
+		FFEAE3E5266B6E6F002D666E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3E4266B6E6F002D666E /* Model.swift */; };
+		FFEAE3EA266B6EB2002D666E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3E9266B6EB2002D666E /* NewsCell.swift */; };
+		FFEAE3EC266B6EC7002D666E /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3EB266B6EC7002D666E /* NewsfeedViewController.swift */; };
+		FFEAE3EE266B6ED5002D666E /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3ED266B6ED5002D666E /* GalleryCell.swift */; };
+		FFEAE3F0266B6EE3002D666E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3EF266B6EE3002D666E /* GalleryViewController.swift */; };
+		FFEAE3F2266B6EF3002D666E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAE3F1266B6EF3002D666E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		FFEAE3D1266B6CCB002D666E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFEAE3D4266B6CCB002D666E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFEAE3D6266B6CCB002D666E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFEAE3DE266B6E41002D666E /* ImageViewLoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewLoadExtension.swift; sourceTree = "<group>"; };
+		FFEAE3E0266B6E50002D666E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FFEAE3E2266B6E5C002D666E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		FFEAE3E4266B6E6F002D666E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FFEAE3E9266B6EB2002D666E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		FFEAE3EB266B6EC7002D666E /* NewsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
+		FFEAE3ED266B6ED5002D666E /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		FFEAE3EF266B6EE3002D666E /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FFEAE3F1266B6EF3002D666E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 		FFEAE3C7266B6CC9002D666E /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
+				FFEAE3DD266B6E13002D666E /* ServiceLayer */,
+				FFEAE3DC266B6DE7002D666E /* MVC */,
 				FFEAE3C8266B6CC9002D666E /* AppDelegate.swift */,
 				FFEAE3CA266B6CC9002D666E /* SceneDelegate.swift */,
 				FFEAE3CC266B6CC9002D666E /* ViewController.swift */,
@@ -65,6 +85,53 @@
 				FFEAE3D6266B6CCB002D666E /* Info.plist */,
 			);
 			path = Newsfeed;
+			sourceTree = "<group>";
+		};
+		FFEAE3DC266B6DE7002D666E /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				FFEAE3E8266B6E8D002D666E /* Detail */,
+				FFEAE3E7266B6E85002D666E /* Gallery */,
+				FFEAE3E6266B6E7D002D666E /* News */,
+				FFEAE3E4266B6E6F002D666E /* Model.swift */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		FFEAE3DD266B6E13002D666E /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FFEAE3DE266B6E41002D666E /* ImageViewLoadExtension.swift */,
+				FFEAE3E0266B6E50002D666E /* NetworkService.swift */,
+				FFEAE3E2266B6E5C002D666E /* RealmService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		FFEAE3E6266B6E7D002D666E /* News */ = {
+			isa = PBXGroup;
+			children = (
+				FFEAE3E9266B6EB2002D666E /* NewsCell.swift */,
+				FFEAE3EB266B6EC7002D666E /* NewsfeedViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		FFEAE3E7266B6E85002D666E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				FFEAE3ED266B6ED5002D666E /* GalleryCell.swift */,
+				FFEAE3EF266B6EE3002D666E /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		FFEAE3E8266B6E8D002D666E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FFEAE3F1266B6EF3002D666E /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +204,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEAE3F0266B6EE3002D666E /* GalleryViewController.swift in Sources */,
+				FFEAE3E5266B6E6F002D666E /* Model.swift in Sources */,
+				FFEAE3E1266B6E50002D666E /* NetworkService.swift in Sources */,
+				FFEAE3F2266B6EF3002D666E /* DetailViewController.swift in Sources */,
+				FFEAE3E3266B6E5C002D666E /* RealmService.swift in Sources */,
 				FFEAE3CD266B6CC9002D666E /* ViewController.swift in Sources */,
 				FFEAE3C9266B6CC9002D666E /* AppDelegate.swift in Sources */,
+				FFEAE3DF266B6E41002D666E /* ImageViewLoadExtension.swift in Sources */,
+				FFEAE3EE266B6ED5002D666E /* GalleryCell.swift in Sources */,
+				FFEAE3EA266B6EB2002D666E /* NewsCell.swift in Sources */,
 				FFEAE3CB266B6CC9002D666E /* SceneDelegate.swift in Sources */,
+				FFEAE3EC266B6EC7002D666E /* NewsfeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
