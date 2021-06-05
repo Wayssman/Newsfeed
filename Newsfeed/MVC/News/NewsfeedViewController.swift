@@ -76,7 +76,8 @@ final class NewsfeedViewController: UIViewController {
             self.changeNewsScreenState(withTitle: "Новости")
           }
         })
-      case .failure(_): // Можно через switch распарсить все типы ошибок
+      case .failure(let error): // Можно через switch распарсить все типы ошибок
+        print(error)
         self.changeNewsScreenState(withTitle: "Не удалось загрузить данные...")
       }
     })
@@ -110,7 +111,7 @@ extension NewsfeedViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "NewsfeedCell", for: indexPath) as! NewsfeedCell
     if let realmNews = realmNews {
-      cell.configurateCell(data: realmNews[indexPath.row])
+      cell.configurateCell(with: realmNews[indexPath.row])
     }
     return cell
   }
@@ -126,7 +127,7 @@ extension NewsfeedViewController: UITableViewDelegate {
     let detailVC = storyboard.instantiateViewController(identifier: "DetailedBoard")
     
     if let detail = detailVC as? DetailViewController {
-      detail.configureDetailViewController(data: data)
+      detail.configureDetailViewController(with: data)
       navigationController?.pushViewController(detail, animated: true)
     }
   }
