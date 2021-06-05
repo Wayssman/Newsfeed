@@ -17,8 +17,8 @@ final class DetailViewController: UIViewController {
   @IBOutlet private weak var imageHeight: NSLayoutConstraint!
   
   // MARK: - Private Properties
-  var data: NewsResultRealm?
-  private var ratio: CGFloat = 0.0
+  private var data: NewsResultRealm?
+  private var ratio: CGFloat = 0
   private var url: String?
   
   // MARK: - Lifecycle
@@ -32,21 +32,27 @@ final class DetailViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    // Задаю формат в коде - так удобнее
-    titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-    titleLabel.textAlignment = .justified
-    titleLabel.numberOfLines = 0
+    setupUI()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) { // Иначе размер ImageView кривой
+    imageHeight.constant = imageView.frame.width * ratio // Рассчитываем высоту
+  }
+  
+  // MARK: - Public Methods
+  func configureDetailViewController(with data: NewsResultRealm) {
+    self.data = data
+  }
+  
+  // MARK: - Private Methods
+  private func setupUI() {
+    titleLabel.configure(with: UIFont.boldSystemFont(ofSize: 18))
+    titleLabel.text = data?.title
     
-    captionLabel.font = UIFont.systemFont(ofSize: 14)
-    captionLabel.textAlignment = .justified
-    captionLabel.numberOfLines = 0
+    captionLabel.configure(with: UIFont.systemFont(ofSize: 14))
     captionLabel.textColor = .gray
     
-    abstractLabel.font = UIFont.systemFont(ofSize: 16)
-    abstractLabel.textAlignment = .justified
-    abstractLabel.numberOfLines = 0
-    
-    titleLabel.text = data?.title
+    abstractLabel.configure(with: UIFont.systemFont(ofSize: 16))
     abstractLabel.text = data?.abstract
     
     imageView.layer.cornerRadius = imageView.frame.width / 18
@@ -71,21 +77,11 @@ final class DetailViewController: UIViewController {
     }
   }
   
-  override func viewDidAppear(_ animated: Bool) { // Иначе размер ImageView кривой
-    imageHeight.constant = imageView.frame.width * ratio // Рассчитываем высоту
-  }
-  
-  // MARK: - Public Methods
-  func configureDetailViewController(data: NewsResultRealm) {
-    self.data = data
-  }
-  
-  // MARK: - Private Methods
-  @objc func rotated() {
+  @objc private func rotated() {
     imageHeight.constant = imageView.frame.width * ratio
   }
   
-  @objc func imageTapped() {
+  @objc private func imageTapped() {
     guard let data = self.data else { return }
     
     if data.multimedia.count > 0 {
@@ -95,7 +91,7 @@ final class DetailViewController: UIViewController {
       let galleryVC = storyboard.instantiateViewController(identifier: "GalleryBoard")
       
       if let gallery = galleryVC as? GalleryViewController {
-        gallery.data = galleryData
+        gallery.configureGalleryViewController(with: galleryData)
         navigationController?.pushViewController(gallery, animated: true)
       }
     }

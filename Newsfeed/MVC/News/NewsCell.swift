@@ -12,13 +12,13 @@ final class NewsfeedCell: UITableViewCell {
   @IBOutlet private weak var newsTitle: UILabel!
   @IBOutlet private weak var newsPreview: UIImageView!
   
-  // MARK: - Public Properties
+  // MARK: - Public Methods
   override func prepareForReuse() {
     newsTitle?.text = ""
     newsPreview?.image = nil
   }
   
-  func configurateCell(data: NewsResultRealm) {
+  func configurateCell(with data: NewsResultRealm) {
     newsTitle?.text = data.title
     newsTitle?.lineBreakMode = .byTruncatingTail
     newsTitle?.font = UIFont.boldSystemFont(ofSize: 16)
